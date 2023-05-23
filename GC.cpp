@@ -18,6 +18,6 @@ int main() {
 	input<<"e = "<< e <<";"<<endl;
 	input<<"v = "<< v <<";"<<endl;
 	input.close();
-	system("minizinc --solver Gecode solver.mzn input.dzn");
+	system("minizinc --solver Gecode solver.mzn input.dzn --time-limit 360000");
 	return 0;
 }
