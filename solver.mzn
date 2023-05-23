@@ -9,7 +9,7 @@ constraint forall(i in 1..e)(c[E[i,1]]!=c[E[i,2]]);
 constraint max(c)<=400;
 constraint c[0] == 0;
 constraint forall(i in 0..v-2)(value_precede(i,i+1, c));
-solve :: int_search(c, smallest, indomain_min, complete) minimize max(c);
+solve minimize max(c);
 
 output [show(max(c)+1), "\n"];
 output [show(c[i])++" "| i in 0..v-1];
